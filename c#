@@ -1,0 +1,21 @@
+using System;
+class program
+{
+    static void Main()
+    {
+    int vacunas;
+    int total = 0;
+    double promedio;
+    string[] dias = {"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"};
+    for (int i = 0; i < 7; i++)
+    {
+        Console.Write("Ingrese las vacunas aplicadas el dia de " + dias[i] + ":" );
+        vacunas = int.Parse(Console.ReadLine());
+        total = total + vacunas;
+    }
+    promedio = total /7;
+     Console.WriteLine("\n-------Reporte final-------");
+     Console.WriteLine("El total de las vacunas aplicadas son:" + total);
+     Console.WriteLine("El promedio diario de las vacunas aplicada son:" + promedio);
+}
+}
