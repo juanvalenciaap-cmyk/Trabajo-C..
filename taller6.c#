@@ -1,0 +1,33 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string [] medicamentos = new string[5];
+        int[] cantidades = new int[5];
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("ingrese el nombre del medicamento" + (i+1) + ":");
+            medicamentos[i] = Console.ReadLine();
+            Console.Write("ingrese la cantidad de medicamentos disponibles: ");
+            cantidades[i] = int.Parse( Console.ReadLine());
+        }
+    Console.WriteLine("\nInventario de los medicamentos");
+    for(int i = 0; i < 5; i++)
+    {
+        Console.WriteLine((i + 1) + "." + medicamentos[i] + "-" + cantidades[i] + "unidades");
+    }
+    int menor = cantidades[0];
+    int posicion = 0;
+    for (int i = 1; i < 5; i++)
+    {
+        if (cantidades[i] < menor)
+        {
+            menor = cantidades[i];
+            posicion = i;
+        }
+    }
+Console.WriteLine("\nMenor stock: " + medicamentos [posicion] + " (" + menor + ")");    
+        
+    }
+}
